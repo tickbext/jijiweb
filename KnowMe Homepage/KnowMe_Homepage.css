@@ -1,0 +1,130 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #111;
+}
+
+nav strong {
+    font-family: 'Degular Display Pro', sans-serif;
+    font-size: 1.5rem;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 4rem;
+    background-color: #000;
+}
+
+header .text {
+    font-family: 'Degular Display Pro', sans-serif;
+    text-align: left;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+header button {
+    background-color: #fff;
+    color: #000;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+header .gradient {
+    background: linear-gradient(135deg, #ff00ff, #00ffff);
+    border-radius: 10px;
+    height: 300px;
+}
+
+section {
+    padding: 4rem 2rem;
+}
+
+.story {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.story img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.team {
+    text-align: center;
+    background-color: #111;
+    padding: 4rem 2rem;
+}
+
+.team h2 {
+    font-family: 'Degular Display Pro', sans-serif;
+    margin-bottom: 2rem;
+}
+
+.team .grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+}
+
+.team .grid img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.stats-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    background-color: #000;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.stats-section div {
+    font-family: 'Degular Display Pro', sans-serif;
+    font-size: 1.5rem;
+}
+
+.stats-section small {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+}
+
+footer {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+}
