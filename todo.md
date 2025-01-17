@@ -10,3 +10,11 @@ Calc aura alg:
     check where user aurafarmed the most and use that one
 
     limit the amount of questions to 20 since we got like 12 auras
+
+
+
+prima sezione: know me col quiz
+seconda sezione: KnowMe, Scopri il tuo futuro
+terza sezione: la nostra missione
+quarta sezione: Spoiler alert: tutto quello che non sai sulle Auras!
+quinta sezione: Chi siamo, FAQ e contatti
