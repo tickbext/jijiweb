@@ -131,8 +131,8 @@ header .gradient:hover {
     opacity: 0.9;
 }
 
-/* Story Section */
-.story {
+/* About Me Section */
+.AboutKnowMe {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
@@ -142,7 +142,7 @@ header .gradient:hover {
     color: #000; /* Inverted text color */
 }
 
-.story div {
+.AboutKnowMe div {
     background-color: #fff;
     color: #000;
     padding: 2rem;
@@ -153,10 +153,51 @@ header .gradient:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }
 
-.story div:hover {
+.AboutKnowMe div:hover {
     transform: translateY(-5px);
     background-color: #f5f5f5; /* Slight highlight on hover */
     color: #333; /* Subtle color change */
+}
+
+.AboutKnowMe h2 {
+    font-family: 'Degular Display Pro', sans-serif;
+    font-size: 2.5rem; /* Slightly larger for emphasis */
+    margin-bottom: 1rem;
+}
+
+.AboutKnowMe p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+/* Story Section */
+.story {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    padding: 6rem 2rem;
+    background-color: #000; /* Inverted background */
+    color: #fff; /* Inverted text color */
+}
+
+.story div {
+    background-color: #111;
+    color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+    height: 80%;
+    width: 80%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.story div:hover {
+    transform: translateY(-5px);
+    background-color: #333; /* Slight highlight on hover */
+    color: #fff; /* Subtle color change */
 }
 
 .story h2 {
@@ -190,6 +231,77 @@ header .gradient:hover {
     opacity: 0.9;
 }
 
+/* Auras Section */
+.auras {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 4rem;
+    background-color: #000;
+    gap: 2rem;
+    min-height: 800px; /* Expanded height */
+}
+
+.auras .text {
+    font-family: 'Degular Display Pro', sans-serif;
+    text-align: left;
+    padding: 2rem;
+    background-color: #111;
+    border-radius: 10px;
+    transition: transform 0.3s, background-color 0.3s;
+    height: 40%;
+    width: 60%;
+}
+
+.auras .text:hover {
+    transform: translateY(-5px);
+    background-color: #222;
+}
+
+.auras h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.auras p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.auras button {
+    background-color: #fff;
+    color: #000;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    justify-content: center;
+}
+
+.auras button:hover {
+    background-color: #333;
+    transform: scale(1.1);
+    color: #fff;
+}
+
+.auras .gradient {
+    background: url('./media/knowme.jpg') center center/cover no-repeat;
+    border-radius: 10px;
+    height: 50%;
+    width: 70%;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.auras .gradient:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
 
 .zaza{
     height: 90%;
