@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KnowMe - Discover Yourself</title>
+    <link rel="stylesheet" href="KnowMe_Homepage.css">
+    <script defer src="KnowMe_Homepage.js"></script>
+</head>
+<body>
+    <nav>
+        <strong>KnowMe
+            <img src="./media/knowmemainicon.svg" class="mainicon" alt="KnowMe Icon">
+        </strong>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#AboutKnowMe">About Us</a></li>
+            <li><a href="#auras">Auras</a></li>
+            <li><a href="#team">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <div class="text">
+            <h1>KnowMe</h1>
+            <p>
+                Pronto a scoprire chi sei?<br>
+                Inizia il quiz e lascia che la tua Aura prenda vita. <br>
+                Il tuo futuro inizia qui!
+            </p>
+            <button onclick="location.href='../KnowMe Quiz/KnowMe_Quiz.html'">Inizia Quiz</button>
+        </div>
+    </header>
+
+    <section id="AboutKnowMe" class="AboutKnowMe">
+        <div>
+            <h2>About Know Me</h2>
+            <p>
+                KnowMe è un ecosistema digitale progettato per rivoluzionare l’orientamento scolastico in Italia.
+                Offriamo strumenti avanzati e interattivi che mettono al centro ogni studente, supportandolo nella
+                scoperta di sé e delle sue potenzialità.
+                Non è solo un percorso di scelta, ma un’esperienza che unisce tecnologia, riflessione e ispirazione
+                per creare una connessione autentica tra giovani e il loro futuro.
+                KnowMe non si limita a consigliare, ma dà valore a ogni percorso, aiutando a costruire carriere e vite
+                che rispecchiano davvero chi siamo.
+            </p>
+        </div>
+        <img src="./media/explanation.jpg" alt="Story" class="zaza">
+    </section>
+
+    <section id="story" class="story">
+        <div>
+            <h2>Our Mission</h2>
+            <p>
+                <br><br>
+                La missione di KnowMe è trasformare l’orientamento scolastico in un viaggio di scoperta personale.
+                Vogliamo aiutarti a valorizzare i tuoi talenti, esplorare le tue passioni e fare scelte consapevoli
+                per costruire il futuro che desideri.
+                KnowMe: il tuo percorso, la tua unicità, il tuo domani.
+            </p>
+        </div>
+        <img src="./media/ourmission.jpg" alt="Story" class="zaza">
+    </section>
+
+    <section id="auras" class="auras">
+        <div class="text">
+            <h2>Spoiler alert:</h2>
+            <p>
+                Tutto quello che non sai sulle Auras! <br><br>
+                In questa parte del sito potrai scoprire le diverse aure e il loro significato.
+                <br><br>
+            </p>
+            <button onclick="location.href='../KnowMe Auras/KnowMe Auras.html'">Scopri Di Piu</button>
+        </div>
+        <!-- Slideshow Container -->
+        <div class="slider-container">
+            <div class="slider-track">
+              <!-- Replace these with the actual filenames in ./media/auras/ -->
+              <img src="./media/auras/aurasdisplay1.jpg" alt="Aura 1">
+              <img src="./media/auras/aurasdisplay2.jpg" alt="Aura 2">
+              <img src="./media/auras/aurasdisplay3.jpg" alt="Aura 3">
+            </div>
+          </div>
+
+          <!-- Slideshow Script -->
+          <script>
+            // Select the track container & all images
+            const track = document.querySelector('.slider-track');
+            const slides = track.querySelectorAll('img');
+            const totalSlides = slides.length;
+            let currentIndex = 0;
+
+            // Function to move the track to show current slide
+            function showSlide(index) {
+              track.style.transform = `translateX(-${index * 100}%)`;
+            }
+
+            // Auto-slide every 3 seconds
+            setInterval(() => {
+              currentIndex = (currentIndex + 1) % totalSlides;
+              showSlide(currentIndex);
+            }, 3000);
+          </script>
+    </section>
+
+    <section id="team" class="team">
+        <h2>Meet The Team</h2>
+        <div class="grid">
+            <div>
+                <img src="./media/photo1.jpg" alt="allen jonathan">
+                <p>allen jonathan</p>
+            </div>
+            <div>
+                <img src="./media/photo2.jpg" alt="bano katrin">
+                <p>bano katrin</p>
+            </div>
+            <div>
+                <img src="./media/photo3.jpg" alt="bombara luigi">
+                <p>bombara luigi</p>
+            </div>
+            <div>
+                <img src="./media/photo4.jpg" alt="Porta Rebecca">
+                <p>porta rebecca</p>
+            </div>
+            <div>
+                <img src="./media/photo5.jpg" alt="Salvi Alessandro">
+                <p>salvi alessandro</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="stats-section">
+        <div onclick="window.location.href='https://www.instagram.com/know.me.it?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=='">
+          <img src="./media/instagram.png" alt="Instagram Icon">
+          <small>Instagram</small>
+        </div>
+        <div onclick="window.location.href='https://www.polimi.it/'">
+          <img src="./media/polimi.png" alt="Polimi Icon">
+          <small>Polimi</small>
+        </div>
+      </section>
+
+
+    <footer>
+        <p>© 2025 KnowMe. All rights reserved.</p>
+    </footer>
+</body>
+</html>
