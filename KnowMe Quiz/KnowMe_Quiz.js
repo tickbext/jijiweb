@@ -1,201 +1,203 @@
-const categorie = {
-    LINK: {
-        colore: ["#53BFF9", "#EBD871"],
-        descrizione: "Sei il Wi-Fi umano: colleghi tutto e tutti, sempre sul pezzo!",
-    },
-    GLOW: {
-        colore: ["#9A98E1", "#C7FDCC"],
-        descrizione: "La tua testa brilla più di un faro: idee chiare, visione da leader.",
-    },
-    ARC: {
-        colore: ["#287379", "#C7FDCC"],
-        descrizione: "Unisci tutto e tutti: sei il ponte che non crolla mai!",
-    },
-    SPARK: {
-        colore: ["#287379", "#F9534D"],
-        descrizione: "Problemi? Tu li bruci al volo con idee geniali.",
-    },
-    HALO: {
-        colore: ["#F4DA6A", "#C5F9CC"],
-        descrizione: "Ascolti così bene che potrebbero metterti su Spotify.",
-    },
-    BURST: {
-        colore: ["#F4DA6A", "#F9534D"],
-        descrizione: "Creatività esplosiva: il cambiamento ti segue ovunque.",
-    },
-    SHINE: {
-        colore: ["#E6E6FA", "#F4DA6A"],
-        descrizione: "Brilli di equilibrio: sei il chill che tutti vorrebbero.",
-    },
-    FLOW: {
-        colore: ["#9A98E1", "#C7FDCC"],
-        descrizione: "Navighi tra le idee come un surfista sull’onda perfetta.",
-    },
-    PULSE: {
-        colore: ["#F890C5", "#287379"],
-        descrizione: "Sei il metronomo della vita: ritmo e impatto al top.",
-    },
-    SPIRE: {
-        colore: ["#4DBEFF", "#F890C5"],
-        descrizione: "Testa alta e ambizione a mille: sei già sulla vetta.",
-    },
-    ROOT: {
-        colore: ["#E6E6FA", "#287379"],
-        descrizione: "Radicato e solido: sei il terreno dove nascono i sogni.",
-    },
-    AETHER: {
-        colore: ["#F4DA6A", "#F890C5"],
-        descrizione: "Filosofia e intuizione? Sei praticamente un Jedi.",
-    },
-};
+document.addEventListener("DOMContentLoaded", () => {
+    const categorie = {
+        LINK: { colore: ["#53BFF9", "#EBD871"], descrizione: "Sei quello che unisce tutto: senza di te, manca sempre qualcosa." },
+        GLOW: { colore: ["#9A98E1", "#C7FDCC"], descrizione: "Illumini le situazioni senza nemmeno provarci." },
+        ARC: { colore: ["#287379", "#C7FDCC"], descrizione: "Per te ogni viaggio è una storia da raccontare, anche se ci sono un sacco di curve." },
+        SPARK: { colore: ["#287379", "#F9534D"], descrizione: "Le tue idee sono fuochi d’artificio: arrivano e boom, tutto cambia." },
+        HALO: { colore: ["#F4DA6A", "#C5F9CC"], descrizione: "Hai quella calma che tutti vorrebbero, tipo zen ma con stile." },
+        BURST: { colore: ["#F4DA6A", "#F9534D"], descrizione: "Sei pura energia, sempre pronto a fare la differenza." },
+        SHINE: { colore: ["#E6E6FA", "#F4DA6A"], descrizione: "Porti positività senza filtri, e questo è il tuo superpotere." },
+        FLOW: { colore: ["#9A98E1", "#C7FDCC"], descrizione: "Con te, le cose scorrono e basta." },
+        PULSE: { colore: ["#F890C5", "#287379"], descrizione: "Hai un ritmo che dà la carica a chiunque ti stia intorno." },
+        SPIRE: { colore: ["#4DBEFF", "#F890C5"], descrizione: "Per te, l’unico limite è il cielo, e forse nemmeno quello." },
+        ROOT: { colore: ["#E6E6FA", "#287379"], descrizione: "Hai radici profonde, ma non smetti mai di crescere." },
+        AETHER: { colore: ["#F4DA6A", "#F890C5"], descrizione: "Vedi cose che gli altri nemmeno immaginano: sei un visionario." },
+    };
 
-const domande = {
-    LINK: [
-        "Ti piace collaborare con gli altri?",
-        "Ti senti a tuo agio nel lavorare in gruppo?",
-        "Trovi facilmente modi per connetterti con chiunque?",
-        "Apprezzi il valore delle relazioni a lungo termine?",
-    ],
-    GLOW: [
-        "Ti senti in pace con te stesso/a?",
-        "Trovi facile ispirare chi ti circonda?",
-        "Credi che la positività sia contagiosa?",
-        "Cerchi spesso armonia e serenità nella vita?",
-    ],
-    ARC: [
-        "Ti piace unire idee diverse in una soluzione unica?",
-        "Sei bravo/a a trovare punti in comune con gli altri?",
-        "Apprezzi le opportunità di crescita personale?",
-        "Vedi le sfide come opportunità per imparare?",
-    ],
-    SPARK: [
-        "Ti senti spesso pieno di idee nuove?",
-        "Ami iniziare nuovi progetti creativi?",
-        "Trovi soluzioni innovative ai problemi?",
-        "Hai la capacità di motivare gli altri con il tuo entusiasmo?",
-    ],
-    HALO: [
-        "Ti prendi cura del benessere degli altri?",
-        "Le persone si rivolgono a te per un consiglio?",
-        "Trovi gratificante proteggere chi ami?",
-        "Cerchi di mantenere l’armonia in ogni situazione?",
-    ],
-    BURST: [
-        "Ti senti energico e determinato nella vita quotidiana?",
-        "Ti piace agire rapidamente per raggiungere risultati?",
-        "Ami affrontare nuove sfide con coraggio?",
-        "Trovi stimolante superare i limiti personali?",
-    ],
-    SHINE: [
-        "Cerchi di essere autentico/a in ogni circostanza?",
-        "Ti senti una guida tranquilla per gli altri?",
-        "Ti piace portare equilibrio e pace?",
-        "Le persone si sentono rilassate intorno a te?",
-    ],
-    FLOW: [
-        "Ti senti a tuo agio quando segui il flusso delle cose?",
-        "Trovi soddisfazione nel lavorare in modo spontaneo?",
-        "Ti piace trovare equilibrio tra creatività e logica?",
-        "Ti senti connesso/a con il ritmo della natura?",
-    ],
-    PULSE: [
-        "Senti una forte energia nel tuo modo di vivere?",
-        "Ti piace il ritmo intenso della vita?",
-        "Trovi motivazione nel vedere il tuo impatto nel mondo?",
-        "Credi che la passione guidi le tue scelte?",
-    ],
-    SPIRE: [
-        "Sei spinto/a da una forte ambizione?",
-        "Ti piace puntare in alto e migliorarti continuamente?",
-        "Ti senti gratificato quando raggiungi nuove vette?",
-        "Trovi motivazione nei tuoi obiettivi personali?",
-    ],
-    ROOT: [
-        "Trovi conforto nel legame con le tue radici?",
-        "Ti senti stabile e radicato/a nella tua vita?",
-        "Credi che la tua forza venga dalle tue fondamenta?",
-        "Ti piace onorare le tue tradizioni e origini?",
-    ],
-    AETHER: [
-        "Credi che ci sia qualcosa di più grande che ci connette?",
-        "Ti senti attratto da pensieri filosofici e profondi?",
-        "Trovi ispirazione nell’intangibile?",
-        "Ami esplorare concetti spirituali e mistici?",
-    ],
-};
+    const domande = {
+        LINK: [
+            "Ti piace collaborare con gli altri?",
+            "Ti senti a tuo agio lavorando in gruppo?",
+            "Trovi facilmente modi per connetterti con chiunque?",
+            "Apprezzi il valore di relazioni durature?",
+        ],
+        GLOW: [
+            "Ti senti in armonia con te stesso/a?",
+            "Trovi facile ispirare chi ti circonda?",
+            "Credi che la positività sia contagiosa?",
+            "Cerchi spesso serenità e equilibrio nella vita?",
+        ],
+        ARC: [
+            "Ti piace combinare idee diverse in una soluzione unica?",
+            "Sei abile nel trovare punti in comune con gli altri?",
+            "Apprezzi le opportunità di crescita personale?",
+            "Vedi le sfide come occasioni per imparare?",
+        ],
+        SPARK: [
+            "Ti senti spesso pieno/a di idee nuove?",
+            "Ami avviare nuovi progetti creativi?",
+            "Trovi soluzioni innovative ai problemi?",
+            "Hai il talento di motivare gli altri con il tuo entusiasmo?",
+        ],
+        HALO: [
+            "Ti prendi cura del benessere delle persone intorno a te?",
+            "Le persone si rivolgono a te per un consiglio?",
+            "Trovi gratificante proteggere chi ami?",
+            "Cerchi di mantenere l’armonia in ogni situazione?",
+        ],
+        BURST: [
+            "Ti senti energico/a e determinato/a nella vita quotidiana?",
+            "Ti piace agire rapidamente per ottenere risultati?",
+            "Ami affrontare nuove sfide con coraggio?",
+            "Trovi stimolante superare i tuoi limiti personali?",
+        ],
+        SHINE: [
+            "Cerchi di essere autentico/a in ogni circostanza?",
+            "Ti senti un'ispirazione per gli altri?",
+            "Ti piace portare equilibrio e pace?",
+            "Le persone si sentono a loro agio intorno a te?",
+        ],
+        FLOW: [
+            "Ti senti sereno/a quando segui il flusso delle cose?",
+            "Trovi soddisfazione nel lavorare in modo spontaneo?",
+            "Ti piace trovare un equilibrio tra creatività e logica?",
+            "Ti senti connesso/a al ritmo della natura?",
+        ],
+        PULSE: [
+            "Senti una forte energia nel tuo modo di vivere?",
+            "Ti piace il ritmo intenso della vita?",
+            "Trovi motivazione vedendo l’impatto delle tue azioni?",
+            "Credi che la passione guidi le tue scelte?",
+        ],
+        SPIRE: [
+            "Sei guidato/a da una forte ambizione?",
+            "Ti piace puntare in alto e migliorarti continuamente?",
+            "Ti senti gratificato/a raggiungendo nuovi traguardi?",
+            "Trovi motivazione nei tuoi obiettivi personali?",
+        ],
+        ROOT: [
+            "Trovi conforto nel legame con le tue radici?",
+            "Ti senti stabile e radicato/a nella tua vita?",
+            "Credi che la tua forza venga dalle tue fondamenta?",
+            "Ami onorare tradizioni e origini?",
+        ],
+        AETHER: [
+            "Credi che ci sia qualcosa di più grande che ci connette tutti?",
+            "Ti senti attratto/a da pensieri profondi e filosofici?",
+            "Trovi ispirazione nell’intangibile?",
+            "Ami esplorare concetti spirituali e mistici?",
+        ],
+    };
 
-let currentQuestionIndex = 0;
-let quizDomande = [];
-const questionElement = document.querySelector(".question");
-const startButton = document.getElementById("startButton");
-const quizButtons = document.getElementById("quizButtons");
-const yesButton = document.getElementById("yesButton");
-const noButton = document.getElementById("noButton");
-const resultDiv = document.getElementById("result");
-const resultText = document.getElementById("resultText");
-const auraImage = document.getElementById("auraImage");
+    const maxQuestions = 20;
+    let currentQuestionIndex = 0;
+    let auraPoints = {};
+    let quizDomande = [];
+    const titleElement = document.querySelector("h1");
+    const questionElement = document.querySelector(".question");
+    const startButton = document.getElementById("startButton");
+    const quizButtons = document.getElementById("quizButtons");
+    const yesButton = document.getElementById("yesButton");
+    const noButton = document.getElementById("noButton");
+    const resultDiv = document.getElementById("result");
+    const resultText = document.getElementById("resultText");
+    const auraImage = document.getElementById("auraImage");
+    const homeButton = document.getElementById("homeButton");
 
-function generaQuiz() {
-    const selectedQuestions = Object.keys(domande).map(categoria => {
-        const questions = domande[categoria];
-        return questions[Math.floor(Math.random() * questions.length)];
+    // Initialize aura points
+    Object.keys(categorie).forEach((key) => {
+        auraPoints[key] = 0;
     });
-    quizDomande = selectedQuestions.sort(() => Math.random() - 0.5);
-}
 
-function mostraDomanda() {
-    if (currentQuestionIndex < quizDomande.length) {
-        questionElement.textContent = quizDomande[currentQuestionIndex];
-    } else {
-        mostraRisultato();
+    function generateQuestion() {
+        if ( currentQuestionIndex >= maxQuestions || currentQuestionIndex >= quizDomande.length) {
+            showResult();
+            return;
+        }
+
+        const currentQuestion = quizDomande[currentQuestionIndex];
+        questionElement.textContent = currentQuestion.question;
     }
-}
 
-function mostraRisultato() {
-    //Cambiare la aura da random a un algoritmo tipo come in todo.md
-    const categoria = Object.keys(categorie)[Math.floor(Math.random() * Object.keys(categorie).length)];
-    const { descrizione, colore } = categorie[categoria];
+    function calculateDominantAura() {
+        const [winnerAura] = Object.entries(auraPoints).sort(([, scoreA], [, scoreB]) => scoreB - scoreA);  // descending
+     return winnerAura[0]; // The key with the largest score
+    }
 
-    questionElement.style.display = "none";
-    quizButtons.style.display = "none";
-    resultDiv.style.display = "block";
-    resultText.innerHTML = `La tua aura è <strong>${categoria}</strong>:<br>${descrizione}`;
+    function showResult() {
+        const dominantAura = calculateDominantAura();
+        const { descrizione, colore } = categorie[dominantAura];
 
-    // Genera un'immagine con gradiente simulato
-    auraImage.src = generaGradiente(colore);
-    auraImage.style.display = "block";
-}
+        questionElement.style.display = "none";
+        quizButtons.style.display = "none";
+        resultDiv.style.display = "block";
+        resultText.innerHTML = `La tua aura è <strong>${dominantAura}</strong>:<br>${descrizione}`;
 
-function generaGradiente(colori) {
-    const canvas = document.createElement("canvas");
-    canvas.width = 500;
-    canvas.height = 500;
-    const ctx = canvas.getContext("2d");
+        auraImage.src = generateGradient(colore);
+        auraImage.style.display = "block";
+    }
 
-    const gradiente = ctx.createLinearGradient(0, 0, 500, 500);
-    gradiente.addColorStop(0, colori[0]);
-    gradiente.addColorStop(1, colori[1]);
+    function generateGradient(colori) {
+        const canvas = document.createElement("canvas");
+        canvas.width = 500;
+        canvas.height = 500;
+        const ctx = canvas.getContext("2d");
 
-    ctx.fillStyle = gradiente;
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+        const gradient = ctx.createLinearGradient(0, 0, 500, 500);
+        gradient.addColorStop(0, colori[0]);
+        gradient.addColorStop(1, colori[1]);
 
-    return canvas.toDataURL("image/png");
-}
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-startButton.addEventListener("click", () => {
-    generaQuiz();
-    currentQuestionIndex = 0;
-    startButton.style.display = "none";
-    quizButtons.style.display = "flex";
-    mostraDomanda();
-});
+        return canvas.toDataURL("image/png");
+    }
 
-yesButton.addEventListener("click", () => {
-    currentQuestionIndex++;
-    mostraDomanda();
-});
+    function handleAnswer(isYes) {
+        const currentQuestion = quizDomande[currentQuestionIndex];
+        const currentAura = currentQuestion.aura;
 
-noButton.addEventListener("click", () => {
-    currentQuestionIndex++;
-    mostraDomanda();
+        // Adjust points based on the answer
+        if (isYes) {
+            auraPoints[currentAura]++;
+            if (domande[currentAura].length > 0) {
+                const nextQuestion = domande[currentAura].shift();
+                quizDomande.push({ question: nextQuestion, aura: currentAura });
+            }
+        } else {
+            auraPoints[currentAura]--;
+        }
+
+        currentQuestionIndex++;
+        generateQuestion();
+    }
+
+    startButton.addEventListener("click", () => {
+        console.log("Start button clicked!");
+        titleElement.style.display = "none"; // Hide title
+        currentQuestionIndex = 0;
+
+        // Prepare initial set of questions
+        quizDomande = Object.keys(domande).map((aura) => ({
+            question: domande[aura].shift(),
+            aura: aura,
+        }));
+        quizDomande = quizDomande.sort(() => Math.random() - 0.5); // Shuffle questions
+
+        startButton.style.display = "none";
+        quizButtons.style.display = "flex";
+        generateQuestion();
+    });
+
+    yesButton.addEventListener("click", () => {
+        handleAnswer(true);
+    });
+
+    noButton.addEventListener("click", () => {
+        handleAnswer(false);
+    });
+
+    homeButton.addEventListener("click", () => {
+        window.location.href = "../Knowme Homepage/KnowMe_Homepage.html";
+    });
 });
